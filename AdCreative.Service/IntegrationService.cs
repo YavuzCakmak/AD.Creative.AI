@@ -11,7 +11,9 @@ namespace AdCreative.Service
     {
         public IntegrationService()
         {
+
         }
+
         public string ProcessItem(string itemContent)
         {
             lock (UniqueContents.UniqueContent)
