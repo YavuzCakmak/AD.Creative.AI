@@ -16,15 +16,15 @@ namespace AD.Creative.AI.API.Controllers
 
 
         [HttpPut]
-        public IActionResult ProcessItem([FromBody] string itemContent)
+        public async Task<IActionResult> ProcessItem([FromBody] string itemContent)
         {
-            _distributedIntegrationService.PutItem(itemContent);
+             _distributedIntegrationService.PutItem(itemContent);
             return Ok();
         }
 
 
         [HttpGet]
-        public IActionResult GetItem()
+        public async Task<IActionResult> GetItem()
         {
             return Ok(_distributedIntegrationService.GetItem());
         }
